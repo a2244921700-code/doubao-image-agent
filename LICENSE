@@ -1,6 +1,6 @@
-非商业使用许可协议 v1.0
-Non-Commercial Use License v1.0
-SPDX-License-Identifier: LicenseRef-NC-1.0
+社区使用许可协议 v1.1
+Community Use License v1.1
+SPDX-License-Identifier: LicenseRef-Community-1.1
 
 版权所有 (c) 2026 a2244921700-code
 Copyright (c) 2026 a2244921700-code
@@ -17,6 +17,7 @@ Copyright (c) 2026 a2244921700-code
    (c) 用于企业内部以营利为目的的生产经营活动；
    (d) 通过广告、订阅、打赏、付费墙等方式直接或间接变现。
 4. "分发"指以任何媒介向第三方提供本作品或其衍生作品的副本。
+5. "书面授权"指作者以电子邮件形式作出的、明确表示同意的回复。
 
 --------------------------------------------------------------------
 二、授权
@@ -33,40 +34,81 @@ Copyright (c) 2026 a2244921700-code
 三、条件
 
 1. 你必须在所有副本与衍生作品中保留本协议全文及原始版权声明。
-2. 你不得将本作品或其衍生作品用于任何商业用途。
+2. 未经第四节约定的授权，你不得将本作品或其衍生作品用于商业用途。
 3. 若你修改了本作品，应在显著位置说明修改内容，且不得暗示原作者为你的修改背书。
-4. 你不得使用作者名称、商标或标识为你的衍生作品作商业性宣传。
+4. 你不得使用作者名称、商标或标识为你的衍生作品作宣传。
 
 --------------------------------------------------------------------
-四、终止
+四、商业使用与授权
 
-你违反本协议任何条款时，本许可自违反之日起自动终止，无需另行通知。
-终止后你必须立即停止使用并删除全部副本。作者有权自行决定是否恢复本许可。
+本作品允许商业使用，但须事先取得作者的书面授权。该授权免费。
+
+1. 申请方式：由拟商用方以电子邮件发送至作者邮箱：
+
+       a2244921700@163.com
+
+2. 申请邮件中应当写明：
+   (a) 申请人的真实身份与联系方式；
+   (b) 商用主体名称与主体类型（个人 / 个体户工作室 / 公司）；
+       如为公司，须写明公司全称；
+   (c) 拟使用的方式与范围，例如集成的产品名称、分发渠道、大致用户规模。
+
+3. 作者回复同意授权的邮件后，授权自该回复邮件发出之时生效，无需支付任何费用。
+
+4. 授权范围以作者回复邮件中明确写明的范围为准；回复邮件未提及的事项不视为授权。
+
+5. 作者未回复、或回复中拒绝授权的，不构成授权。此种情况下不得将本作品用于商业用途。
+
+6. 授权仅对申请邮件中载明的商用主体及使用范围有效。主体变更、或超出原授权范围使用，
+   应当重新提出申请。
+
+7. 申请邮件与作者的回复邮件共同构成授权凭证，双方都应妥善保存。
+
+8. 作者有权在授权时附加合理条件（例如要求标注来源、限定版本）。附加条件以回复邮件为准。
 
 --------------------------------------------------------------------
-五、免责声明
+五、终止
+
+1. 你违反本协议任何条款时，本许可自违反之日起自动终止，无需另行通知。
+2. 商业授权可被作者撤销，撤销自作者发出通知邮件之时生效；已按授权合法完成的分发不受影响。
+3. 本许可或商业授权终止后，你必须停止使用并删除全部副本。
+
+--------------------------------------------------------------------
+六、免责声明
 
 本作品按"现状"提供，不附带任何明示或默示的担保，包括但不限于对适销性、
 特定用途适用性及不侵权的担保。因使用或无法使用本作品而产生的任何直接、
 间接、偶然或后果性损失，作者不承担任何责任。
 
 --------------------------------------------------------------------
-六、其他
+七、其他
 
 1. 本协议仅授予著作权层面的许可，不授予任何商标、服务标记或商号的使用权。
-2. 商业用途需事先取得作者的书面授权，联系方式见仓库作者信息。
-3. 本协议条款如与适用法律冲突，以法律为准，其余条款继续有效。
+2. 本协议条款如与适用法律冲突，以法律为准，其余条款继续有效。
+3. 作者保留本协议未明确授予的一切权利。
 
 --------------------------------------------------------------------
 English Summary
 
-This is a source-available, NON-COMMERCIAL license. You are free to use,
-copy, modify, merge, publish, distribute and sublicense this work for any
-non-commercial purpose, provided that you keep this license and the
-copyright notice intact in all copies and derivative works.
+This work is free for any NON-COMMERCIAL use: you may use, copy, modify,
+merge, publish, distribute and sublicense it, provided that this license
+and the copyright notice stay intact in all copies and derivative works.
 
-Commercial use of any kind is NOT permitted without prior written
-permission from the copyright holder.
+COMMERCIAL USE IS ALLOWED, BUT REQUIRES PRIOR WRITTEN PERMISSION, WHICH
+IS GRANTED FREE OF CHARGE. To obtain it, email the author at
+a2244921700@163.com stating:
+
+  (a) your real identity and contact details;
+  (b) the name of the commercial entity and its type
+      (individual / sole-proprietor studio / company; companies must
+      give the full registered name);
+  (c) how and where the work will be used.
+
+The permission takes effect when the author replies by email agreeing to
+it, and no fee is charged. The scope of the permission is limited to what
+that reply states. Using the work commercially without such a reply is
+not permitted. The request email and the author's reply together serve as
+proof of the permission.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
