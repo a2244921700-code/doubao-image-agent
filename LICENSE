@@ -1,0 +1,76 @@
+非商业使用许可协议 v1.0
+Non-Commercial Use License v1.0
+SPDX-License-Identifier: LicenseRef-NC-1.0
+
+版权所有 (c) 2026 a2244921700-code
+Copyright (c) 2026 a2244921700-code
+
+--------------------------------------------------------------------
+一、定义
+
+1. "本作品"指本仓库中包含的全部源代码、文档、配置及其他材料。
+2. "你"指行使本许可所授予权利的自然人或法人。
+3. "商业用途"指以直接或间接获取商业利益、金钱报酬或其他经济利益为目的的使用，
+   包括但不限于：
+   (a) 将本作品或其衍生作品作为商品出售、出租、许可或收费分发；
+   (b) 将其集成进以营利为目的的产品或服务，并向用户收费或借此获得收入；
+   (c) 用于企业内部以营利为目的的生产经营活动；
+   (d) 通过广告、订阅、打赏、付费墙等方式直接或间接变现。
+4. "分发"指以任何媒介向第三方提供本作品或其衍生作品的副本。
+
+--------------------------------------------------------------------
+二、授权
+
+在遵守本协议全部条款的前提下，作者授予你一项全球范围、免费、非独占的许可，
+允许你：
+
+1. 使用本作品，用于任何非商业目的；
+2. 复制、修改、改编本作品，并创作衍生作品；
+3. 公开传播、分发本作品及其衍生作品，无论是否经过修改；
+4. 将上述权利再许可给他人，前提是对方完整接受本协议。
+
+--------------------------------------------------------------------
+三、条件
+
+1. 你必须在所有副本与衍生作品中保留本协议全文及原始版权声明。
+2. 你不得将本作品或其衍生作品用于任何商业用途。
+3. 若你修改了本作品，应在显著位置说明修改内容，且不得暗示原作者为你的修改背书。
+4. 你不得使用作者名称、商标或标识为你的衍生作品作商业性宣传。
+
+--------------------------------------------------------------------
+四、终止
+
+你违反本协议任何条款时，本许可自违反之日起自动终止，无需另行通知。
+终止后你必须立即停止使用并删除全部副本。作者有权自行决定是否恢复本许可。
+
+--------------------------------------------------------------------
+五、免责声明
+
+本作品按"现状"提供，不附带任何明示或默示的担保，包括但不限于对适销性、
+特定用途适用性及不侵权的担保。因使用或无法使用本作品而产生的任何直接、
+间接、偶然或后果性损失，作者不承担任何责任。
+
+--------------------------------------------------------------------
+六、其他
+
+1. 本协议仅授予著作权层面的许可，不授予任何商标、服务标记或商号的使用权。
+2. 商业用途需事先取得作者的书面授权，联系方式见仓库作者信息。
+3. 本协议条款如与适用法律冲突，以法律为准，其余条款继续有效。
+
+--------------------------------------------------------------------
+English Summary
+
+This is a source-available, NON-COMMERCIAL license. You are free to use,
+copy, modify, merge, publish, distribute and sublicense this work for any
+non-commercial purpose, provided that you keep this license and the
+copyright notice intact in all copies and derivative works.
+
+Commercial use of any kind is NOT permitted without prior written
+permission from the copyright holder.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
