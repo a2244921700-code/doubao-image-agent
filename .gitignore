@@ -1,0 +1,9 @@
+# 运行产出
+output/
+staging/
+*.log
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

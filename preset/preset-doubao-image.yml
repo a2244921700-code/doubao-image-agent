@@ -1,0 +1,111 @@
+# ── 自动化豆包生图 preset ──
+- insert:
+    - id: preset-doubao-image
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: doubao-image
+        name: "自动化豆包生图"
+        description: "面向图片产出的专职 Agent：驱动本机豆包桌面版按需求生图，出图前自动决定画幅比例，出图后逐张监制，不合格自动打回重做，并按规范命名归档。"
+        order: 60
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: |-
+                You are 自动化豆包生图, an agent that turns a written brief into finished image assets by driving the Doubao (豆包) desktop app installed on this machine, and then judging the result with your own eyes before anything is delivered.
+
+                你的工作语言是中文。文件名、路径、模型名、命令参数保持原样。
+
+                ## 你拥有的产线
+
+                引擎目录：C:/Users/22449/.dsh/skills/doubao-image/engine
+                配套技能：doubao-image（任何出图任务开始前先读取它）
+
+                用 pwsh 调用 node agent.mjs ...，命令输出 JSON：
+                - gen --prompt-file <文件> --title <slug> [--category <用途id>] [--ratio 3:1] [--reuse]
+                - pick --stage <目录> --pick <编号|all> --title <中文标题>
+                - ratios / health / launch / new-chat
+
+                ## 不可协商的四条
+
+                1. 比例先行。豆包在提示词没有比例线索时一律返回 1:1，方形画布会毁掉按钮、横幅、竖屏背景。每一次 gen 都必须带 --category 或 --ratio；用户没说用途就自己按用途判断，并在交付时说明判断依据。
+                2. 必须真的看。候选图下载后用 read_image 逐张打开，按技能里的审片清单逐项打分。不许凭提示词推断结果，更不许没看图就交付。
+                3. 不合格就打回。指出具体缺陷（而不是"再来一张"），用 --reuse 在同一对话里发修改意见，最多 3 轮；仍不合格就换新对话重写提示词，并说明问题出在提示词。
+                4. 交付要可追溯。归档一律走 pick，命名走 {date}_{slug}_{seq}，侧车 JSON 保留提示词、比例、来源链接与对话地址。
+
+                ## 交付时说明什么
+
+                文件名、像素、比例、选了第几张、为什么选它，以及被淘汰的原因。比例校验失败（ratioOk:false）时不要假装通过——重发或调整比例，并告诉用户发生了什么。
+
+                豆包原图右下角有"豆包AI生成"水印，由下游 Photoshop 环节处理，不因此打回。
+
+                Reply in Chinese.
+          - id: agent-instructions
+            name: '@deepseek-ai/dsh-agent-instructions'
+            config:
+              maxBytes: 65536
+          - id: tool-bash
+            name: '@deepseek-ai/dsh-tool-bash'
+            disabled: !!js process.platform === 'win32'
+          - id: tool-pwsh
+            name: '@deepseek-ai/dsh-tool-pwsh'
+            disabled: !!js process.platform !== 'win32'
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+            config:
+              sampleOverCapGlobResults: false
+          - id: tool-jobs
+            name: '@deepseek-ai/dsh-tool-jobs'
+          - id: skill-filesystem
+            name: '@deepseek-ai/dsh-skill-filesystem'
+            config:
+              customSkillDirs:
+                - 'C:/Users/22449/.dsh/skills'
+          - id: tool-skill
+            name: '@deepseek-ai/dsh-tool-skill'
+          - id: command-goal
+            name: '@deepseek-ai/dsh-command-goal'
+          - id: tool-goal
+            name: '@deepseek-ai/dsh-tool-goal'
+          - id: planning
+            name: cordis:group
+            group: true
+            isolate:
+              planMode: true
+            config:
+              - id: plan-mode
+                name: '@deepseek-ai/dsh-plan-mode'
+                config:
+                  section: |-
+                    你处于计划模式。在 exit_plan_mode 成功或用户切换模式之前保持计划模式。先探测再计划：用只读手段确认素材、目录与既有产出，不要写文件、不要改配置、不要直接执行。
+                    计划要写清楚这单要产出什么、用哪个用途类别与比例、提示词怎么组织、审片看哪几项、不合格时怎么打回。准备好后调用 exit_plan_mode，把完整计划作为该轮唯一且最后的工具调用。
+          - id: compaction
+            name: cordis:group
+            group: true
+            isolate:
+              compaction: true
+              toolResultPruner: true
+            config:
+              - id: compaction-basic
+                name: '@deepseek-ai/dsh-compaction-basic'
+              - id: command-compact
+                name: '@deepseek-ai/dsh-command-compact'
+              - id: tool-result-pruner
+                name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+                config:
+                  thresholdChars: 8192
+                  headChars: 4096
+                  tailChars: 1024
+          - id: tool-ask-user
+            name: '@deepseek-ai/dsh-tool-ask-user'
+          - id: tool-todo
+            name: '@deepseek-ai/dsh-tool-todo'
+            config:
+              allowParallelInProgress: true
+          - id: tool-web
+            name: '@deepseek-ai/dsh-tool-web'
+            config:
+              fetch: true
+              searchTimeoutMs: 60000

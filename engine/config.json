@@ -1,0 +1,9 @@
+{
+  "exe": "C:\\Users\\22449\\AppData\\Local\\Doubao\\Application\\app\\Doubao.exe",
+  "port": 9333,
+  "outputDir": "D:\\DSH_GDT\\doubao-agent\\output",
+  "stageDir": "D:\\DSH_GDT\\doubao-agent\\staging",
+  "naming": "{date}_{slug}_{seq}",
+  "expectCount": 3,
+  "generationTimeoutSec": 300
+}
